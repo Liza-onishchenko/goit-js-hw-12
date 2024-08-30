@@ -5,19 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <section class="gallery-section">
+      <div class="container">
+        <form class="search-form js-search-form">
+          <input class="search-input js-search-input" type="text" name="user_query" placeholder="Search images..." required />
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+        <ul class="gallery js-gallery">
+          <li></li>
+        </ul>
+        <button class="js-load-more load-more  is-hidden" type="button">Load more</button> 
+        <span class="loader js-loader is-hidden"></span>
+      </div>
+    </section>
 
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
